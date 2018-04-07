@@ -1,10 +1,12 @@
 # calliope-wahlcomputer
 Calliope Mini als Wahlcomputer (Projekt & Unterrichtsmaterial)
 
-_Bitte habt Spaß daran, dieses Projekt zu nutzen. Ich würde mich auch sehr freuen, wenn ihr Verbesserungen an der Software oder an der Dokumentation# calliope-wahlcomputer gleich hier im Git anpasst. Wenn du nicht weist wie, oder es dir zu viel Arbeit ist, schick mir deine Verbesserungen einfach an boris.crismancich@gmail.com.
+Dieses Projekt ist für den Unterricht mit dem [Calliope Mini](https://calliope.cc) Schulcomputer gedacht.
+
+_Bitte habt Spaß daran, dieses Projekt zu nutzen. Wenn ihr Verbesserungen an der Software oder an der Dokumentation enntwickelt, freue ich mich, wenn ihr sie auch hier wieder einpflegt uns mit den anderen teilt. Wenn du nicht weist wie, oder es dir zu viel Arbeit ist, schick mir deine Verbesserungen einfach an boris.crismancich@gmail.com. Du hast Ideen, was man noch machen kann? Schreib mir bitte.
 
 # Warum gibt es Wahlcomputer?
-Die meisten Wahlen finden mit Wahlzetteln aus Papier statt. Alle wahlberechtigten bekommen je einen Wahlzettel und können darauf ihre Wahlmöglichkeiten ankreuzen. Die ausgefüllten werden gesammelt und die Stimmen für die Wahlmöglichkeiten ausgezählt. Die Wahlmöglichkeit mit den meisten Stimmen gewinnt die Wahl.Wahlzettel aus Papier hat viele Nachteile, besonders bei Wahlen, wo viele Tausend oder sogar Millionen von Menschen wählen dürfen.
+Die meisten Wahlen finden mit Wahlzetteln aus Papier statt. Alle wahlberechtigten bekommen je einen Wahlzettel und können darauf ihre Wahlmöglichkeiten ankreuzen. Die ausgefüllten werden gesammelt und die Stimmen für die Wahlmöglichkeiten ausgezählt. Die Wahlmöglichkeit mit den meisten Stimmen gewinnt die Wahl. Wahlzettel aus Papier haben viele Nachteile, besonders bei Wahlen, wo viele Tausend oder sogar Millionen von Menschen wählen dürfen.
 
 - Wahlzettel müssen für jede Wahl neu gedruckt werden, das ist teuer, langwierig und belastet die Umwelt
 - Wahlzettel müssen zu Wahllokalen an vielen Orten transportiert werden, ebenfalls teuer, langwierig und umweltschädlich
@@ -54,8 +56,6 @@ Beim Auszählen müssen wir jedes Mal vergleichen und alle Wahlmöglichkeiten du
 - Nutzt eine einzigartige Geräte-ID für jeden Calliope Mini um sicherzustellen, dass nur die zur Wahl zugelassenen Calliopes stimmen abgeben können.
 - Ihr könnt auch für jede Wahlmöglichkeit einen Calliope nehmen. Dann muss bei Wahlcomputer bei der Abstimmung die Funk Gruppe umgestellt werden.
 
-
-
 # Warum gibt es Wahlcomputer?
 Die meisten Wahlen finden mit Wahlzetteln aus Papier statt. Alle wahlberechtigten bekommen je einen Wahlzettel und können darauf ihre Wahlmöglichkeiten ankreuzen. Die ausgefüllten werden gesammelt und die Stimmen für die Wahlmöglichkeiten ausgezählt. Die Wahlmöglichkeit mit den meisten Stimmen gewinnt die Wahl.Wahlzettel aus Papier hat viele Nachteile, besonders bei Wahlen, wo viele Tausend oder sogar Millionen von Menschen wählen dürfen.
 
@@ -79,12 +79,16 @@ Zwei oder mehr Calliope Mini.
 ## So funktioniert es
 Ein Calliope Mini fungiert als zentraler Hauptrechner, auf dem die Stimmen gesammelt und angezeigt werden.
 Je nachdem wie viele Calliopes man zur Verfügung hat, dient ein Calliope Mini als Wahlcomputer zur Stimmabgabe für alle, oder jede*r stimmt mit dem eigenen Wahlcomputer ab.
-## Bedienung Wahlcomputer
+## Bedienung des Wahlcomputers
 Beim Wahlcomputer kannst du mit den Knöpfen A und B zwischen den Wahlmöglichkeiten hin- und her schalten. Drückst du A und B zusammen, wird deine Wahl abgesendet und du hörst einen Piepton als Bestätigung.
 
 Um die Anzahl der möglichen Wahlmöglichkeiten anzupassen, muss im Code des Wahlcomputers der Platzhalter für Anzahl_Wahlmoeglichkeiten angepasst werden. Bei zentralen Wahlcomputer sind derzeit 3 Wahlmöglichkeiten vorgesehen, du kannst das aber jederzeit erweitern.
 
+Während der Stimmabgabe muss auch den zentrale Wahlcomputer laufen. Mit einem Druck auf A und B gleichzeitig, zeigt er das aktuelle Ergebis an.
+
 ## Programmierung der Wahlcomputer (Client für Abstimmung)
+![alt text][https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_code.png]
+
 Hier brauchen wir zwei Platzhalter. Einmal müssen wir die Anzahl von Auswahlmöglichkeiten festlegen. Dann kann man die gewählte Wahlmöglichkeit mit Knopf A oder B auswählen. Wir beginnen mit 1. Dann kann man die Zahl mit B so lange erhöhen, bis die Anzahl von AUswahlmöglichkeiten erreicht ist. Danach beginnen wir wieder bei 1. Mit 1 geht es genauso, nur zählen wir runter. Die aktuelle Zahl wird immer kleiner. Außer wenn 1 erreicht ist. Dann zählen wir nicht nach 0 sondern fangen wieder bei der größten AUswahlmöglichkeit an.
 
 ## Programmierung des zentralen Wahlcomputer (Server für Auswertung und ANzeige)
