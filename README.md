@@ -87,15 +87,15 @@ Um die Anzahl der möglichen Wahlmöglichkeiten anzupassen, muss im Code des Wah
 Während der Stimmabgabe muss auch den zentrale Wahlcomputer laufen. Mit einem Druck auf A und B gleichzeitig, zeigt er das aktuelle Ergebis an.
 
 ## Programmierung der Wahlcomputer (Client für Abstimmung)
-![alt text](https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_code.png)
+![Wahlcomputer Code](https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_code.png)
 
 Hier brauchen wir zwei Platzhalter. Einmal müssen wir die Anzahl von Auswahlmöglichkeiten festlegen. Dann kann man die gewählte Wahlmöglichkeit mit Knopf A oder B auswählen. Wir beginnen mit 1. Dann kann man die Zahl mit B so lange erhöhen, bis die Anzahl von AUswahlmöglichkeiten erreicht ist. Danach beginnen wir wieder bei 1. Mit 1 geht es genauso, nur zählen wir runter. Die aktuelle Zahl wird immer kleiner. Außer wenn 1 erreicht ist. Dann zählen wir nicht nach 0 sondern fangen wieder bei der größten AUswahlmöglichkeit an.
 
 ## Programmierung des zentralen Wahlcomputer (Server für Auswertung und ANzeige)
 Der Hauptrechner für unsere Wahl hat zwei Aufgaben. Als erstes müssen eingehende Stimmen gezählt werden.
-
+![Code für die Abstimmung](https://github.com/crismancich/calliope-wahlcomputer/raw/master/wahlcomputer_calliope_zaehlen.png)
 Hier zählen wir je nach gewählter Wahlmöglichkeit, die vom Wahlcomputer gesendet wurde, die abgegebenen Stimmen in den Platzhaltern Stimmen_fuer_1, Stimmen_fuer_2 und Stimmen_fuer_3.
-
+![Code für die Auswertung](https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_calliope_auswerten.png)
 Beim Auszählen müssen wir jedes Mal vergleichen und alle Wahlmöglichkeiten durchgehen: Hat die aktuelle Wahlmöglichkeiten mehr Stimmen als die letzte? Wenn ja, ist das erstmal unser Favorit.Wir merken uns dabei den aktuellen Favoriten (im Platzhalter Die_meisten_Stimmen_hat) und die bisher höchste Zahl an Stimmen Hoechste_Anzahl_Stimmen. Wenn wir sehen, dass eine Wahlmöglichkeiten noch mehr Stimmen hat, als unser bisheriger Favorit, dann nehmen wir die neue Wahlmöglichkeit und dpeichern sie in Die_meisten_Stimmen_hat. Da diese die meisten Stimmen hat, aktualisieren wir auch die Hoechste_Anzahl_Stimmen. Am Ende bleibt in Die_meisten_Stimmen_hat die Wahlmöglichkeit stehen, die wirklich gewonnen hat. Jetzt spielen wir noch einen Ton und zeigen das Ergebnis an.
 
 # Unterrichtsideen
