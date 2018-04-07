@@ -33,6 +33,9 @@ Beim Wahlcomputer kannst du mit den Knöpfen A und B zwischen den Wahlmöglichke
 
 Um die Anzahl der möglichen Wahlmöglichkeiten anzupassen, muss im Code des Wahlcomputers der Platzhalter für Anzahl_Wahlmoeglichkeiten angepasst werden. Bei zentralen Wahlcomputer sind derzeit 3 Wahlmöglichkeiten vorgesehen, du kannst das aber jederzeit erweitern.
 
+## So nutzt du den Code
+Lade dir erst dieses Git Repository herunter. Darin findest du die .hex Dateien. EIne ist für den Wahlcomputer zur Stimmabgabe, die andere für den zentralen Wahlcomputer, mit dem die Stimmen ausgezählt und angezeigt werden. Du kannst die Dateien mit dem PXT Editor [PXT Editor Calliope Mini](https://pxt.calliope.cc) öffnen. Dann kannst du die bearbeiten oder auf deinen Calliope Mini laden.
+
 ## Programmierung der Wahlcomputer (Client für Abstimmung)
 Hier brauchen wir zwei Platzhalter. Einmal müssen wir die Anzahl von Auswahlmöglichkeiten festlegen. Dann kann man die gewählte Wahlmöglichkeit mit Knopf A oder B auswählen. Wir beginnen mit 1. Dann kann man die Zahl mit B so lange erhöhen, bis die Anzahl von AUswahlmöglichkeiten erreicht ist. Danach beginnen wir wieder bei 1. Mit 1 geht es genauso, nur zählen wir runter. Die aktuelle Zahl wird immer kleiner. Außer wenn 1 erreicht ist. Dann zählen wir nicht nach 0 sondern fangen wieder bei der größten AUswahlmöglichkeit an.
 
