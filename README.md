@@ -87,7 +87,7 @@ Um die Anzahl der möglichen Wahlmöglichkeiten anzupassen, muss im Code des Wah
 Während der Stimmabgabe muss auch den zentrale Wahlcomputer laufen. Mit einem Druck auf A und B gleichzeitig, zeigt er das aktuelle Ergebis an.
 
 ## Programmierung der Wahlcomputer (Client für Abstimmung)
-![alt text][https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_code.png]
+![alt text](https://raw.githubusercontent.com/crismancich/calliope-wahlcomputer/master/wahlcomputer_code.png)
 
 Hier brauchen wir zwei Platzhalter. Einmal müssen wir die Anzahl von Auswahlmöglichkeiten festlegen. Dann kann man die gewählte Wahlmöglichkeit mit Knopf A oder B auswählen. Wir beginnen mit 1. Dann kann man die Zahl mit B so lange erhöhen, bis die Anzahl von AUswahlmöglichkeiten erreicht ist. Danach beginnen wir wieder bei 1. Mit 1 geht es genauso, nur zählen wir runter. Die aktuelle Zahl wird immer kleiner. Außer wenn 1 erreicht ist. Dann zählen wir nicht nach 0 sondern fangen wieder bei der größten AUswahlmöglichkeit an.
 
